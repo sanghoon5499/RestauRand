@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RestaurRand</title>
+
+    <!-- import font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css_files/index_style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMCbfKMOQmplUNvOiHNBalzBiXXabRG2c&callback=initMap&libraries=places&v=weekly&map_ids=8d193001f940fde3"
+        async
+        src="code.js"
+    ></script>
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> 
+</head>
+
+
+
+
+
+<body>
+    <!-- Top banner, titular blurb + address input -->
+    <div class="container-fluid">
+        <!-- main banner image will be the background img of the div row -->
+        <div class="row" style="height: 60vh">
+            <div class="col-sm-2 d-none d-sm-block" style="background-color:white;"></div>
+            <div class="col-sm-8" style="background-color:#E6E6FA;"> --[ UNDER RE-CONSTRUCTION ]-- </div>
+            <div class="col-sm-2 d-none d-sm-block" style="background-color:white;"></div>
+        </div>
+      </div>
+
+      <!-- Center sections with information -->
+      <!-- order-first/order-last swapping is confusing but makes sense if you read the code top to bottom, 
+                where each new first/last order is "stacked" on top of the previous. (Eg. 2nd use of "first" sticks to the right side
+                of the 1st use of "first") -->
+      <!-- order-md-1, order-md-2 is used as specific divs must come first or last depending on the screen platform -->
+
+
+      <div class="container-fluid">
+        <div class="row" style="height: 45vh">
+            <div class="col-2    order-first d-none d-sm-block" style="background-color:white;"></div>
+            <div class="col-sm-3 order-first order-md-1" style="background-color:#F0F0FF;">.col-3</div>
+            <div class="col-sm-5 order-last  order-md-2" style="background-color:#FFF0F5;">.col-5</div>
+            <div class="col-2    order-last  d-none d-sm-block" style="background-color:white;"></div>
+        </div>
+        
+        <div class="row" style="height: 45vh">
+            <div class="col-2    order-first d-none d-sm-block" style="background-color:white;"></div>
+            <div class="col-sm-5 order-last  order-md-1" style="background-color:#E6E6FA;">.col-5</div>
+            <div class="col-sm-3 order-first order-md-1" style="background-color:#FFE5EE;">.col-3</div>
+            <div class="col-2    order-last d-none d-sm-block" style="background-color:white;"></div>
+            </div>
+      </div>
+
+      <!-- Bottom information section -->
+      <div class="container-fluid">
+        <div class="row" style="height: 30vh">
+            <div class="col-12" style="background-color:#FFF0F5;">.col-12</div>
+        </div>
+      </div>
+    
+</body>
+
+
+    <script> 
+        function changePage() {
+            // reset localStorage data
+            localStorage.setItem("userLat", 0);
+            localStorage.setItem("userLng", 0);
+            localStorage.removeItem("name");
+
+            window.location.href = "maps.html"
+        }
+    </script>
+</html>

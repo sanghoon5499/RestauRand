@@ -1,0 +1,8 @@
+@media (max-width: 576px) {
+  .col-sm-5 {
+    height: 30vh;
+  }
+  .col-sm-3 {
+    height: 15vh;
+  }
+}
