@@ -6,9 +6,6 @@
   .col-sm-3 {
     height: 20vh;
   }
-  .col-12 {
-    height: 25vh;
-  }
 }
 @media (min-width: 801px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
@@ -21,9 +18,6 @@
   .col-sm-3 {
     height: 25vh;
   }
-  .col-12 {
-    height: 20vh;
-  }
 }
 @media (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
@@ -33,9 +27,6 @@
   .col-sm-3 {
     height: 45vh;
   }
-  .col-12 {
-    height: 30vh;
-  }
 }
 @media (min-width: 1281px) {
   /* hi-res laptops and desktops */
@@ -44,8 +35,5 @@
   }
   .col-sm-3 {
     height: 45vh;
-  }
-  .col-12 {
-    height: 30vh;
   }
 }
