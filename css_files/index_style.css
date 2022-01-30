@@ -1,22 +1,71 @@
-.vertical-center {
-  min-height: 100%; /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-
-  display: flex;
-  align-items: center;
-}
-
 @media (min-width: 320px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+  .title {
+    padding-bottom: 20vh;
+    font-size: 4vh;
+  }
+  .titleBlurb {
+    font-size: 3.6vh;
+  }
+  .titleSub {
+    padding-top: 2vh;
+    font-size: 5vh;
+    font-weight: bold;
+  }
+  .subtitleDiv {
+    padding-top: 1vh;
+  }
+  .subtitle {
+    font-size: 3.5vh;
+  }
+
+  .info {
+    padding-top: 4.5vh;
+    color: white;
+    font-size: 2.5vh;
+  }
+
   .col-sm-5 {
-    height: 30vh;
+    height: 35vh;
   }
   .col-sm-3 {
-    height: 20vh;
+    height: 27vh;
+  }
+  .col-sm-4 {
+    height: 27vw;
+  }
+  .spacing {
+    font-size: 3vh;
   }
 }
 @media (min-width: 801px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .title {
+    padding-bottom: 20vh;
+    font-size: 3vh;
+  }
+  .titleBlurb {
+    font-size: 4.5vh;
+  }
+
+  .titleSub {
+    padding-top: 4vh;
+    font-size: 3vh;
+    font-weight: bold;
+  }
+  .subtitleDiv {
+    padding-top: 2vh;
+  }
+  .subtitle {
+    font-size: 2vh;
+  }
+
+  .info {
+    padding-top: 6vh;
+    color: white;
+    font-size: 2vh;
+  }
+
   .col-2 {
     width: 10vw;
   }
@@ -26,22 +75,87 @@
   .col-sm-3 {
     height: 25vh;
   }
+  .col-sm-4 {
+    height: 27vw;
+  }
+  .spacing {
+    font-size: 3vh;
+  }
 }
 @media (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
+  .title {
+    padding-bottom: 13vh;
+  }
+  .titleBlurb {
+    font-size: 7vh;
+  }
+
+  .titleSub {
+    padding-top: 4vh;
+    font-size: 3vh;
+    font-weight: bold;
+  }
+  .subtitleDiv {
+    padding-top: 2vh;
+  }
+  .subtitle {
+    font-size: 2vh;
+  }
+
+  .info {
+    padding-top: 4.5vh;
+    color: white;
+    font-size: 3.5vh;
+  }
+
   .col-sm-5 {
     height: 45vh;
   }
   .col-sm-3 {
     height: 45vh;
+  }
+  .col-sm-4 {
+    height: 27vw;
+  }
+  .spacing {
+    font-size: 3vh;
   }
 }
 @media (min-width: 1281px) {
   /* hi-res laptops and desktops */
+  .title {
+    padding-bottom: 13vh;
+  }
+  .titleBlurb {
+    font-size: 7vh;
+  }
+
+  .titleSub {
+    padding-top: 10vh;
+    font-size: 6vh;
+    font-weight: bold;
+  }
+  .subtitleDiv {
+    padding-top: 2vh;
+  }
+  .subtitle {
+    font-size: 4vh;
+  }
+
+  .info {
+    padding-top: 6vh;
+    color: white;
+    font-size: 2.5vh;
+  }
+
   .col-sm-5 {
     height: 45vh;
   }
   .col-sm-3 {
     height: 45vh;
+  }
+  .spacing {
+    font-size: 3vh;
   }
 }
