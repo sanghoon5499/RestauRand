@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RestaurRand</title>
+
+    <!-- import font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css_files/index_style.css">
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMCbfKMOQmplUNvOiHNBalzBiXXabRG2c&callback=initMap&libraries=places&v=weekly&map_ids=8d193001f940fde3"
+        async
+        src="code.js"
+    ></script>
+
+</head>
+
+
+
+
+
+<body>
+    <br><br><br><br><br>
+
+    <div>
+        <form name="login">
+
+        <h1> Hungry? Don't know where to go? </h1>
+        <br><br>
+
+        <!--
+        <label for="username">Username</label>
+        <input type="text" autocomplete="off" id="username" name="username" placeholder="username">
+        <br>-->
+
+        <input type="button" value="Find me a restaurant!" style="font-size: 200%; font-family: Staatliches" onClick="changePage()">
+        </form>
+
+        <br><br><br><br>
+        <h4 style="font-size: 150%;">RestauRand</h4>
+
+    </div>
+
+
+    <script> 
+        function changePage() {
+            // reinitialize localStorage data
+            localStorage.setItem("userLat", 0);
+            localStorage.setItem("userLng", 0);
+            localStorage.removeItem("name");
+
+            window.location.href = "info.html"
+        }
+    </script>
+
+
+
+    </body>
+
+
+
+</html> 

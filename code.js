@@ -4,7 +4,7 @@
 
 // idea: have a list of messages to display when loading up the map
 //   document.getElementById("loadingTxt").innerHTML = messages[random];
- 
+
 
 // Use this key for GitHub Pages deployment: AIzaSyBMCbfKMOQmplUNvOiHNBalzBiXXabRG2c
 // Local: AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE
@@ -19,20 +19,6 @@ function randomLatLng(min, max) {
 // parameter when you first load the API. For example:
 // <script src="https://maps.googleapis.com/maps/api/js?key=[YOUR_KEY]&libraries=places">
 function initMap() {
-    document.getElementById("loading").style.display = "block";
-
-
-
-    //////////////////////////////////////////////////////////////////////
-    // Loading messages - add to the list as you see fit
-
-    var messages = ["Get ready for the pick!"];
-    var messageIdx = Math.floor(Math.random() * messages.length);
-    document.getElementById("loadingTxt").innerHTML = messages[messageIdx];
-    
-    //////////////////////////////////////////////////////////////////////
-
-
     //////////////////////////////////////////////////////////////////////
     // Setting latitude, longitude
 
@@ -42,7 +28,7 @@ function initMap() {
 
     console.log(latitude)
     console.log(longitude)
-    
+
     // user wanted to hae full random:
     if (localStorage.getItem("userLat") == 0 || localStorage.getItem("userLat") == null) {
         latitude = randomLatLng(43.44, 43.47);
@@ -73,16 +59,14 @@ function initMap() {
     // Create the places service.
     const service = new google.maps.places.PlacesService(map);
     let getNextPage;
-    const moreButton = document.getElementById("more");
-    
+
     // automate getNextPage
     for (let i = 0; i < 3; i++){
-        moreButton.disabled = true;
         if (getNextPage) {
             getNextPage();
         }
     }
-    
+
 
     obj = {
         "data": [],
@@ -156,7 +140,7 @@ function initMap() {
 
 var placesArr = [];
 function addPlaces(places, map, load) {
-    const placesList = document.getElementById("places");
+    //const placesList = document.getElementById("places");
 
     for (const place of places) {
         if (place.geometry && place.geometry.location) {
@@ -177,7 +161,7 @@ function addPlaces(places, map, load) {
 
         const li = document.createElement("li");
         li.textContent = place.name;
-        
+
         // use place.name to add to array
         if (placesArr.length < 60) {
             placesArr.push(place.name);
@@ -185,7 +169,7 @@ function addPlaces(places, map, load) {
         console.log(place.name)
 
 
-        placesList.appendChild(li);
+        //placesList.appendChild(li);
         li.addEventListener("click", () => {
             map.setCenter(place.geometry.location);
         });
@@ -202,15 +186,15 @@ function addPlaces(places, map, load) {
 
 
     // replace elements
-    document.getElementById("rname").innerHTML = placesArr[idx];
-    document.getElementById("address").innerHTML = straddress;
+    //document.getElementById("rname").innerHTML = placesArr[idx];
+    //document.getElementById("address").innerHTML = straddress;
 
 
 
     // found a place; pan the map to that location and put a marker on it:
     const geocoder = new google.maps.Geocoder();
     geocodeAddress(geocoder, map, address);
-    
+
 
 
     // debug
@@ -238,4 +222,3 @@ function geocodeAddress(geocoder, resultsMap, fullAddress) {
       }
     });
   }
-  

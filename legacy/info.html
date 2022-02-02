@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css_files/info.css">
+</head>
+<body>
+    <br><br><br><br><br>
+
+    <h1>Basic Info:</h1>
+
+    <div>
+        <form name="info">
+        <label for="name">Name: </label>
+        <input type="text" autocomplete="off" id="name" name="name" placeholder="name">
+        <br>
+
+        <input type="button" id="address" name="address" value="Find restaurants near you" onClick="addressAllow()">
+
+
+        <br><br><br><br><br>
+
+        <input type="button" value="Submit" onClick="saveData()">
+        </form>
+    </div>
+
+    <script>
+        function addressAllow() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+                showPosition(navigator.geolocation.getCurrentPosition(showPosition))
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function showPosition(position) {
+            console.log(position.coords.latitude)
+            console.log(position.coords.longitude)
+
+            localStorage.setItem("userLat", position.coords.latitude);
+            localStorage.setItem("userLng", position.coords.longitude);
+        }
+
+
+        function saveData() {
+            var name = document.forms["info"]["name"].value;
+
+            if (name == "") {
+                alert("Enter a name!")
+            }
+
+            else {
+                localStorage.setItem("name", name);
+                window.location.href = "maps.html";
+            }
+        }
+
+    </script>
+</body>
+</html> 

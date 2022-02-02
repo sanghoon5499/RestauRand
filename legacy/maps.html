@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <script>
+        src="https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+waterloo+canada&key=AIzaSyBMCbfKMOQmplUNvOiHNBalzBiXXabRG2c" 
+    </script>
+    <script>
+        src="code.js"
+    </script>
+
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RestaurRand</title>
+
+
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="css_files/map_style.css">
+    </head>
+
+
+
+
+
+    <body id="information"> <!-- left -->
+        <div id="container" class="resultsList"> <!-- map part (right side)-->
+            <div id="map"></div>
+        </div>
+
+        <!-- Take a while to load; loading gif-->
+        <div id="loading"></div>
+        <div id="whiteBackdrop">
+            <h3 id="loadingTxt">Loading...</h3>
+        </div>
+
+        <!-- Jquery loading icons and stuff -->
+        <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                window.setTimeout("fadeMyDiv();", 5000); //call fade in 3 seconds
+                }
+            )
+
+            function fadeMyDiv() {
+                $("#whiteBackdrop").fadeOut('slow');
+                $("#loadingTxt").fadeOut('slow');
+                $("#loading").fadeOut('slow');
+            }
+        </script>
+
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <!-- AIzaSyBMCbfKMOQmplUNvOiHNBalzBiXXabRG2c -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMCbfKMOQmplUNvOiHNBalzBiXXabRG2c&callback=initMap&libraries=places&v=weekly&map_ids=8d193001f940fde3"
+        async="false"
+    ></script>
+    <script src="code.js"></script>
+    </body>
+</html> 

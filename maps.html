@@ -39,21 +39,68 @@
         <!-- Top banner, titular blurb + address input -->
         <div class="container-fluid">
             <div class="row" style="height: 6vh">
-                <div class="col-12" style="background-color:#E6E6FA;">.col-12</div>
+                <div class="col-12" style="background-color:#FF9600;">
+                    
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h1>RestaurRand</h1>
+                        </div>
+                        <div class="col-sm-6"></div>
+                        <div class="col-sm-3">
+                            <div class="input-group addressBar">
+                                <input type="inputAddress" class="form-control" placeholder="userAddress">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button">></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
             </div>
             
         </div>
         
 
-        <div class="container-fluid">
+        <div class="container-fluid" id="information">
             <div class="row" style="height: 94vh">
-                <div class="col-sm-3" style="background-color:#FFE5EE;">.col-3</div>
-                <div class="col-sm-9" style="background-color:#FFF0F5;">.col-9</div>
+                <!-- INFO SECTION -->
+                <div class="col-sm-3" style="background-color:white;"></div>
+
+                <!-- MAP SECTION -->
+                <div class="col-sm-9" style="background-color:white;">
+                    <div id="container" class="resultsList">
+                        <div id="map"></div>
+                    </div>
+
+                    <div id="whiteBackdrop">
+                        <h3>Loading...</h3>
+                    </div>
+
+                    <script
+                        src="https://code.jquery.com/jquery-3.6.0.min.js"
+                        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+                        crossorigin="anonymous">
+                    </script>
+                    <script>
+                        $(document).ready(function() {
+                            window.setTimeout("fadeMyDiv();", 5000); //call fade in 3 seconds
+                            }
+                        )
+
+                        function fadeMyDiv() {
+                            $("#whiteBackdrop").fadeOut('slow');
+                            $("#loadingTxt").fadeOut('slow');
+                            $("#loading").fadeOut('slow');
+                        }
+                    </script>
+                
+                
+                </div>
             </div>
         </div>
-
-
-    
     </body>
 
 

@@ -1,0 +1,147 @@
+#loading {
+  background: url("ripple2.gif") no-repeat center center;
+  /*background: url("loading_icons/ripple2.gif") no-repeat center center;     <-- this doesn't work for some reason*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999999;
+}
+
+#whiteBackdrop {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999998;
+}
+
+#loadingTxt {
+  font-family: "Staatliches";
+  top: 60%;
+  font-size: 200%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#address {
+  font-size: 150%;
+}
+
+#rname {
+  font-family: "Staatliches";
+  font-size: 300%;
+}
+
+#info {
+  font-family: "Staatliches";
+
+  position: absolute;
+  outline: 5px dashed black;
+  top: 20%;
+  width: 25%;
+  height: 55%;
+  margin-left: 25%;
+}
+
+/* height: 70% */
+#container {
+  height: 100%;
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+#sidebar {
+  flex-basis: 5rem;
+  flex-grow: 0;
+  padding: 0rem;
+  max-width: 0rem;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+
+/* top: 0% */
+#map {
+  top: 0%;
+  left: 50%;
+  flex-basis: 0;
+  flex-grow: 4;
+  height: 100%;
+}
+
+#sidebar {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h3 {
+  position: relative;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0px 0;
+  flex-grow: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+  flex-grow: 0;
+}
+
+li {
+  background-color: #f1f1f1;
+  padding: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+li:nth-child(odd) {
+  background-color: #fcfcfc;
+}
+
+button {
+  width: 100%;
+  padding: 0rem;
+  flex-grow: 0;
+  cursor: pointer;
+  background: #1a73e8;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  color: #c5d4f0;
+}
+
+button:disabled {
+  background-color: #9fc1ee;
+  color: #c5d4f0;
+  cursor: auto;
+}
+
+.resultsList {
+  font-family: Arial, Helvetica, sans-serif;
+}
