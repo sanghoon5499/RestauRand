@@ -186,13 +186,13 @@ function addPlaces(places, map, load) {
 
 
     // // replace elements
-    // document.getElementById("rname").innerHTML = placesArr[idx];
-    // document.getElementById("address").innerHTML = straddress;
+    document.getElementById("rname").innerHTML = placesArr[idx];
+    document.getElementById("address").innerHTML = straddress;
 
     console.log("fuuckckkc")
 
-    document.getElementById("rname").innerHTML = "fuck";
-    document.getElementById("address").innerHTML = "shit";
+    // document.getElementById("rname").innerHTML = "fuck";
+    // document.getElementById("address").innerHTML = "shit";
 
 
 
