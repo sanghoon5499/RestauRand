@@ -1,9 +1,101 @@
-@media (max-width: 576px) {
+@media (min-width: 320px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
   .col-sm-9 {
     height: 64vh;
   }
   .col-sm-3 {
     height: 30vh;
+  }
+
+  .rname {
+    font-size: 8.5vh;
+    font-weight: normal;
+  }
+  .address {
+    font-size: 4.5vh;
+    font-weight: lighter;
+  }
+  .furtherInfo {
+    font-size: 3.5vh;
+    font-weight: lighter;
+  }
+  .spacing {
+    font-size: 3vh;
+  }
+}
+@media (min-width: 801px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .col-sm-9 {
+    height: 94vh;
+  }
+  .col-sm-3 {
+    height: 94vh;
+  }
+
+  .rname {
+    font-size: 8.5vh;
+    font-weight: normal;
+  }
+  .address {
+    font-size: 4.5vh;
+    font-weight: lighter;
+  }
+  .furtherInfo {
+    font-size: 3.5vh;
+    font-weight: lighter;
+  }
+  .spacing {
+    font-size: 3vh;
+  }
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .col-sm-9 {
+    height: 94vh;
+  }
+  .col-sm-3 {
+    height: 94vh;
+  }
+
+  .rname {
+    font-size: 8.5vh;
+    font-weight: normal;
+  }
+  .address {
+    font-size: 4.5vh;
+    font-weight: lighter;
+  }
+  .furtherInfo {
+    font-size: 3.5vh;
+    font-weight: lighter;
+  }
+  .spacing {
+    font-size: 3vh;
+  }
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+  .col-sm-9 {
+    height: 94vh;
+  }
+  .col-sm-3 {
+    height: 94vh;
+  }
+
+  .rname {
+    font-size: 8.5vh;
+    font-weight: normal;
+  }
+  .address {
+    font-size: 4.5vh;
+    font-weight: lighter;
+  }
+  .furtherInfo {
+    font-size: 3.5vh;
+    font-weight: lighter;
+  }
+  .spacing {
+    font-size: 3vh;
   }
 }
 
@@ -17,7 +109,6 @@
   z-index: 9999998;
 }
 
-/* height: 70% */
 #container {
   height: 100%;
   width: 100%;
@@ -26,7 +117,6 @@
   flex-direction: row;
 }
 
-/* top: 0% */
 #map {
   top: 0%;
   left: 1%;

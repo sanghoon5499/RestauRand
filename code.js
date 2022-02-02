@@ -185,9 +185,14 @@ function addPlaces(places, map, load) {
     var straddress = address.substring(0, address.indexOf(",")) // cuts of "...,Waterloo, ON" part of address
 
 
-    // replace elements
-    //document.getElementById("rname").innerHTML = placesArr[idx];
-    //document.getElementById("address").innerHTML = straddress;
+    // // replace elements
+    // document.getElementById("rname").innerHTML = placesArr[idx];
+    // document.getElementById("address").innerHTML = straddress;
+
+    console.log("fuuckckkc")
+
+    document.getElementById("rname").innerHTML = "fuck";
+    document.getElementById("address").innerHTML = "shit";
 
 
 
