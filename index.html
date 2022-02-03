@@ -50,7 +50,7 @@
                         <div class="input-group addressBar">
                             <input type="inputAddress" class="form-control" placeholder="userAddress">
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button">></button>
+                                <button style="background-color: #FF9600; color: black;" class="btn btn-outline-secondary" type="button">></button>
                             </div>
                         </div>
                     </div>
@@ -108,9 +108,24 @@
                 <div class="row">
                     <div class="col-md-3 d-none d-sm-block"></div>
 
-                    <div class="col-md-2 info" style="text-align:center">About</div>
-                    <div class="col-md-2 info" style="text-align:center">GitHub</div>
-                    <div class="col-md-2 info" style="text-align:center">Contact</div>
+
+                    <div class="col-md-2 info" style="text-align:center">
+                        <a href="https://linkedin.com/in/sanghoonchoi">Me</a>
+                    </div>
+                    <div class="col-md-2 info" style="text-align:center">
+                        <a href="https://github.com/sanghoon5499/RestauRand">GitHub</a>
+                    </div>
+                    <div class="col-md-2 info" style="text-align:center">
+                        <a href="#" onClick="mailer();return false;">Contact</a>
+                    </div>
+
+                    <script>
+                        function mailer() {
+                            let action = confirm("Send mail?");
+                            if (action) window.location.href = "mailto:sanghoon@mitofthenorth.com";
+                            else return;
+                        }
+                    </script>
 
                     <div class="col-md-3">ㅤ</div>
                 </div>

@@ -35,6 +35,22 @@ function initMap() {
         longitude = randomLatLng(-80.58, -80.46);
     }
 
+
+    let addressTest = "615-776 Laurelwood Dr.";
+    geocoder.geocode({address: addressTest}, (results, status) => {
+        if (status === "OK") {
+            console.log("Lat:")
+            console.log(results["data"]["geometry"]["lat"]);
+            console.log("Lng:")
+            console.log(results["data"]["geometry"]["lng"]);
+            
+        } else {
+            alert("geocode failed")
+        }
+    })
+
+
+
     // Create the map.
     //  - convert lat, long to int:
     latitude = parseFloat(latitude);
