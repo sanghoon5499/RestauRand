@@ -40,7 +40,7 @@ function initMap() {
     geocoder.geocode({address: addressTest}, (results, status) => {
         if (status === "OK") {
             console.log("Lat, Lng:")
-            console.log(results[0].geometry.location);
+            console.log(results[0].geometry.lat);
             
         } else {
             alert("Geocode was not successful for the following reason: " + status);
