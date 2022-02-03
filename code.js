@@ -190,7 +190,7 @@ function addPlaces(places, map, load) {
     document.getElementById("rname").innerHTML = placesArr[idx];
     document.getElementById("address").innerHTML = straddress;
     document.getElementById("price_range").innerHTML = "Price range: " + "$".repeat(price_level);
-    document.getElementById("rating").innerHTML = "Ratings: " + rating;
+    document.getElementById("rating").innerHTML = "Rating: " + rating;
 
 
 

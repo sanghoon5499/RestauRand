@@ -31,6 +31,10 @@
 
 
     <body>
+        <div id="whiteBackdrop">
+            <h3>Loading...</h3>
+        </div>
+
         <!-- Top banner, titular blurb + address input -->
         <div class="container-fluid">
             <div class="row" style="height: 6vh">
@@ -68,20 +72,9 @@
                         <h1 class="spacing">ㅤ</h1>
                     </div>
                     
-
-
-
                     <h2 class="furtherInfo" id="type"></h2>
                     <h2 class="furtherInfo" id="price_range"></h2>
                     <h2 class="furtherInfo" id="rating"></h2>
-
-
-                    <!-- <h2 class="furtherInfo">Type: Generic Food Type</h2>
-                    <h2 class="furtherInfo">Price Range: $$$$</h2>
-                    <h2 class="furtherInfo">Ratings: ★★★★★</h2> -->
-                
-                
-                
                 </div>
 
                 <!-- MAP SECTION -->
@@ -90,9 +83,7 @@
                         <div id="map"></div>
                     </div>
 
-                    <div id="whiteBackdrop">
-                        <h3>Loading...</h3>
-                    </div>
+                    
 
                     <script
                         src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -101,7 +92,7 @@
                     </script>
                     <script>
                         $(document).ready(function() {
-                            window.setTimeout("fadeMyDiv();", 5000); //call fade in 3 seconds
+                            window.setTimeout("fadeMyDiv();", 3000); //call fade in 3 seconds
                             }
                         )
 
@@ -111,8 +102,6 @@
                             $("#loading").fadeOut('slow');
                         }
                     </script>
-                
-                
                 </div>
             </div>
         </div>
