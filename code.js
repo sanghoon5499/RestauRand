@@ -36,7 +36,7 @@ function initMap() {
     }
 
     const geocoder = new google.maps.Geocoder();
-    let addressTest = "615-776 Laurelwood Dr.";
+    let addressTest = "776 Laurelwood Drive";
     geocoder.geocode({address: addressTest}, (results, status) => {
         if (status === "OK") {
             console.log("Lat:")
@@ -45,7 +45,7 @@ function initMap() {
             console.log(results["data"]["geometry"]["lng"]);
             
         } else {
-            alert("geocode failed")
+            alert("Geocode was not successful for the following reason: " + status);
         }
     })
 
