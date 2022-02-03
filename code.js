@@ -181,6 +181,7 @@ function addPlaces(places, map, load) {
     // random variables
     var idx = Math.floor(Math.random() * placesArr.length);
     var price_level = obj["data"][idx]["price_level"];
+    var rating = obj["data"][idx]["rating"];
     var address = obj["data"][idx]["vicinity"];
     var straddress = address.substring(0, address.indexOf(",")) // cuts of "...,Waterloo, ON" part of address
 
@@ -188,11 +189,9 @@ function addPlaces(places, map, load) {
     // // replace elements
     document.getElementById("rname").innerHTML = placesArr[idx];
     document.getElementById("address").innerHTML = straddress;
+    document.getElementById("price_range").innerHTML = "Price range: " + price_level;
+    document.getElementById("rating").innerHTML = "Ratings: " + rating;
 
-    console.log("fuuckckkc")
-
-    // document.getElementById("rname").innerHTML = "fuck";
-    // document.getElementById("address").innerHTML = "shit";
 
 
 

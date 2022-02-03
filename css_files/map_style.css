@@ -8,8 +8,10 @@
   }
 
   .rname {
-    font-size: 8.5vh;
+    font-size: 8vh;
     font-weight: normal;
+    margin-bottom: 0vh;
+    line-height: 9vh;
   }
   .address {
     font-size: 4.5vh;
@@ -33,8 +35,10 @@
   }
 
   .rname {
-    font-size: 8.5vh;
+    font-size: 8vh;
     font-weight: normal;
+    margin-bottom: 0vh;
+    line-height: 9vh;
   }
   .address {
     font-size: 4.5vh;
@@ -58,8 +62,10 @@
   }
 
   .rname {
-    font-size: 8.5vh;
+    font-size: 8vh;
     font-weight: normal;
+    margin-bottom: 0vh;
+    line-height: 9vh;
   }
   .address {
     font-size: 4.5vh;
@@ -83,15 +89,17 @@
   }
 
   .rname {
-    font-size: 8.5vh;
+    font-size: 7vh;
     font-weight: normal;
+    margin-bottom: 0vh;
+    line-height: 9vh;
   }
   .address {
-    font-size: 4.5vh;
+    font-size: 4vh;
     font-weight: lighter;
   }
   .furtherInfo {
-    font-size: 3.5vh;
+    font-size: 3.2vh;
     font-weight: lighter;
   }
   .spacing {
