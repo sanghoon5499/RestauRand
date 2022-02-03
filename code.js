@@ -35,7 +35,7 @@ function initMap() {
         longitude = randomLatLng(-80.58, -80.46);
     }
 
-
+    const geocoder = new google.maps.Geocoder();
     let addressTest = "615-776 Laurelwood Dr.";
     geocoder.geocode({address: addressTest}, (results, status) => {
         if (status === "OK") {
