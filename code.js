@@ -20,48 +20,32 @@ function randomLatLng(min, max) {
 // <script src="https://maps.googleapis.com/maps/api/js?key=[YOUR_KEY]&libraries=places">
 function initMap() {
     //////////////////////////////////////////////////////////////////////
-    // Setting latitude, longitude
+    // Set address
+    var address = localStorage.getItem("address");
 
-    // user selected to find a restaurant near them:
-    var latitude = localStorage.getItem("userLat");
-    var longitude = localStorage.getItem("userLng"); 
-
-    console.log(latitude)
-    console.log(longitude)
-
-    // user wanted to hae full random:
+    // If user does not have a stored address, and skipped index.html, give default long/lat.
+    //   - default long/lat will also be used if user address cannot be converted to long/lat.
     if (localStorage.getItem("userLat") == 0 || localStorage.getItem("userLat") == null) {
         latitude = randomLatLng(43.44, 43.47);
         longitude = randomLatLng(-80.58, -80.46);
     }
 
+    // for the address
     const geocoder = new google.maps.Geocoder();
-    let addressTest = "776 Laurelwood Drive";
-    geocoder.geocode({address: addressTest}, (results, status) => {
+    geocoder.geocode({address: address}, (results, status) => {
         if (status === "OK") {
-            console.log("Lat:")
-            console.log(results[0].geometry.location.lat());
-            console.log("Lng:")
-            console.log(results[0].geometry.location.lng());
-
-
-            // var latitude = results[0].geometry.location.lat();
-            // var longitude = results[0].geometry.location.lng();
-            
+            latitude = results[0].geometry.location.lat();
+            longitude = results[0].geometry.location.lng();
         } else {
             alert("Geocode was not successful for the following reason: " + status);
+            alert("longitude and latitude default")
         }
     })
 
-
-
     // Create the map.
-    //  - convert lat, long to int:
+    //  - convert long/lat to int:
     latitude = parseFloat(latitude);
     longitude = parseFloat(longitude);
-
-    console.log(latitude);
-    console.log(longitude);
 
     //////////////////////////////////////////////////////////////////////
 

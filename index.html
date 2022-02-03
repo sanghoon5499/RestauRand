@@ -48,9 +48,9 @@
                     <div class="col-sm-4 d-none d-md-block"></div> <!--d-none d-lg-block-->
                     <div class="col-sm-4">
                         <div class="input-group addressBar">
-                            <input type="inputAddress" class="form-control" placeholder="userAddress">
+                            <input id="inputAddress" type="inputAddress" class="form-control" placeholder="userAddress">
                             <div class="input-group-append">
-                                <button style="background-color: #FF9600; color: black;" class="btn btn-outline-secondary" type="button">></button>
+                                <button style="background-color: #FF9600; color: black;" class="btn btn-outline-secondary" type="button" onClick="changePage()">></button>
                             </div>
                         </div>
                     </div>
@@ -133,16 +133,16 @@
             </div>
         </div>
     </div>
-    
 </body>
 
 
     <script> 
         function changePage() {
             // reset localStorage data
-            localStorage.setItem("userLat", 0);
-            localStorage.setItem("userLng", 0);
-            localStorage.removeItem("name");
+            
+            var address = document.getElementById("inputAddress").value;
+            localStorage.setItem("address", address)
+
 
             window.location.href = "maps.html"
         }

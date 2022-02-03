@@ -42,12 +42,12 @@
                     
                     <div class="row">
                         <div class="col-sm-3">
-                            <div class="RestauRandTitle">RestaurRand</div>
+                            <div class="RestauRandTitle">RestauRand</div>
                         </div>
                         <div class="col-sm-6"></div>
                         <div class="col-sm-3">
                             <div class="input-group addressBar">
-                                <input type="inputAddress" class="form-control" placeholder="userAddress">
+                                <input id="inputAddress" type="inputAddress" class="form-control" placeholder="userAddress">
                                 <div class="input-group-append">
                                     <button style="background-color: white;" class="btn btn-outline-secondary" type="button">></button>
                                 </div>
@@ -116,4 +116,17 @@
         async="false"
     ></script>
     <script src="code.js"></script>
+
+
+    <script> 
+        function updateAddress() {
+            // reset localStorage data
+            
+            var address = document.getElementById("inputAddress").value;
+            localStorage.setItem("address", address)
+
+
+            location.reload();
+        }
+    </script>
 </html>
