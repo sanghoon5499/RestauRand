@@ -7,6 +7,12 @@
     height: 30vh;
   }
 
+  .RestauRandTitle {
+    font-size: 5vh;
+    font-weight: lighter;
+    padding-top: 10vh;
+  }
+
   .rname {
     font-size: 8vh;
     font-weight: normal;
@@ -32,6 +38,12 @@
   }
   .col-sm-3 {
     height: 94vh;
+  }
+
+  .RestauRandTitle {
+    font-size: 5vh;
+    font-weight: lighter;
+    padding-top: 10vh;
   }
 
   .rname {
@@ -61,6 +73,12 @@
     height: 94vh;
   }
 
+  .RestauRandTitle {
+    font-size: 5vh;
+    font-weight: lighter;
+    padding-top: 10vh;
+  }
+
   .rname {
     font-size: 8vh;
     font-weight: normal;
@@ -86,6 +104,18 @@
   }
   .col-sm-3 {
     height: 94vh;
+  }
+
+  .RestauRandTitle {
+    font-size: 5vh;
+    font-weight: lighter;
+    padding-top: 3vh;
+    line-height: 0%;
+  }
+
+  .addressBar {
+    line-height: 0%;
+    padding-top: 1vh;
   }
 
   .rname {
