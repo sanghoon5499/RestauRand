@@ -39,8 +39,14 @@ function initMap() {
     let addressTest = "776 Laurelwood Drive";
     geocoder.geocode({address: addressTest}, (results, status) => {
         if (status === "OK") {
-            console.log("Lat, Lng:")
-            console.log(results[0].geometry.lat);
+            console.log("Lat:")
+            console.log(results[0].geometry.location.lat());
+            console.log("Lng:")
+            console.log(results[0].geometry.location.lng());
+
+
+            // var latitude = results[0].geometry.location.lat();
+            // var longitude = results[0].geometry.location.lng();
             
         } else {
             alert("Geocode was not successful for the following reason: " + status);
