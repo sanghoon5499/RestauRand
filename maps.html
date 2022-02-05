@@ -31,8 +31,11 @@
 
 
     <body>
-        <div id="whiteBackdrop">
-            <h3>Loading...</h3>
+        <div class="justify-content-center" id="whiteBackdrop">
+            <div class="spinner-border text-warning" role="status" style="width: 5rem; height: 5rem;">
+                <span class="sr-only"></span>
+            </div>
+            
         </div>
 
         <!-- Top banner, titular blurb + address input -->
@@ -44,8 +47,8 @@
                         <div class="col-sm-3">
                             <div class="RestauRandTitle">RestauRand</div>
                         </div>
-                        <div class="col-sm-6"></div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-6 d-none d-sm-block"></div>
+                        <div class="col-sm-3 d-none d-sm-block">
                             <div class="input-group addressBar">
                                 <input id="inputAddress" type="inputAddress" class="form-control" placeholder="userAddress">
                                 <div class="input-group-append">
@@ -65,16 +68,31 @@
                 <!-- INFO SECTION -->
                 <div class="col-sm-3" style="background-color:white;">
                     <!-- when testing, add temporary Name and Address so that it actually shows up in file:/// browser -->
-                    <div id="rname" class="rname"></div>
-                    <div id="address" class="address"></div>
+                    <div id="rname" class="rname">Business Name</div>
+                    <div id="address" class="address">123 Address Street</div>
                     
                     <div class="row">
                         <h1 class="spacing">ㅤ</h1>
                     </div>
                     
-                    <h2 class="furtherInfo" id="type"></h2>
-                    <h2 class="furtherInfo" id="price_range"></h2>
-                    <h2 class="furtherInfo" id="rating"></h2>
+                    <h2 class="furtherInfo" id="type">type: generic food</h2>
+                    <h2 class="furtherInfo" id="price_range">price: $$$$</h2>
+                    <h2 class="furtherInfo" id="rating">rating: *****</h2>
+
+                    <div class="row">
+                        <h1 class="spacing">ㅤ</h1>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 d-block d-sm-none">
+                            <div class="input-group addressBar">
+                                <input id="inputAddress" type="inputAddress" class="form-control" placeholder="userAddress">
+                                <div class="input-group-append">
+                                    <button style="background-color: #FF9600; color: black;" class="btn btn-outline-secondary" type="button" onClick="updateAddress()">></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- MAP SECTION -->

@@ -1,100 +1,103 @@
 @media (min-width: 320px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
   .col-sm-9 {
-    height: 64vh;
+    height: 54vh;
   }
   .col-sm-3 {
-    height: 30vh;
+    height: 40vh;
   }
 
   .RestauRandTitle {
-    font-size: 5vh;
+    font-size: 4vh;
     font-weight: lighter;
-    padding-top: 10vh;
+    padding-top: 0vh;
   }
 
   .rname {
-    font-size: 8vh;
+    font-size: 6vh;
     font-weight: normal;
+    padding-top: 2vh;
     margin-bottom: 0vh;
-    line-height: 9vh;
+    line-height: 6vh;
   }
   .address {
-    font-size: 4.5vh;
+    font-size: 4vh;
     font-weight: lighter;
   }
   .furtherInfo {
-    font-size: 3.5vh;
+    font-size: 3vh;
     font-weight: lighter;
   }
   .spacing {
-    font-size: 3vh;
+    font-size: 0.5vh;
   }
 }
 @media (min-width: 801px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
   .col-sm-9 {
-    height: 94vh;
+    height: 54vh;
   }
   .col-sm-3 {
-    height: 94vh;
+    height: 40vh;
   }
 
   .RestauRandTitle {
-    font-size: 5vh;
+    font-size: 4vh;
     font-weight: lighter;
-    padding-top: 10vh;
+    padding-top: 0vh;
   }
 
   .rname {
-    font-size: 8vh;
+    font-size: 6vh;
     font-weight: normal;
+    padding-top: 2vh;
     margin-bottom: 0vh;
-    line-height: 9vh;
+    line-height: 6vh;
   }
   .address {
-    font-size: 4.5vh;
+    font-size: 4vh;
     font-weight: lighter;
   }
   .furtherInfo {
-    font-size: 3.5vh;
+    font-size: 3vh;
     font-weight: lighter;
   }
   .spacing {
-    font-size: 3vh;
+    font-size: 0.5vh;
   }
 }
 @media (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
   .col-sm-9 {
-    height: 94vh;
+    height: 54vh;
   }
   .col-sm-3 {
-    height: 94vh;
+    height: 40vh;
   }
 
   .RestauRandTitle {
-    font-size: 5vh;
+    font-size: 4vh;
     font-weight: lighter;
-    padding-top: 10vh;
+    padding-top: 0vh;
   }
 
   .rname {
-    font-size: 8vh;
+    font-size: 6vh;
     font-weight: normal;
+    padding-top: 2vh;
     margin-bottom: 0vh;
-    line-height: 9vh;
+    line-height: 6vh;
   }
   .address {
-    font-size: 4.5vh;
+    font-size: 4vh;
     font-weight: lighter;
   }
   .furtherInfo {
-    font-size: 3.5vh;
+    font-size: 3vh;
     font-weight: lighter;
   }
   .spacing {
-    font-size: 3vh;
+    font-size: 0.5vh;
   }
 }
 @media (min-width: 1281px) {
