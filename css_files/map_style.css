@@ -31,6 +31,9 @@
   .spacing {
     font-size: 0.5vh;
   }
+  .spacingLoading {
+    padding-top: 20vh;
+  }
 }
 @media (min-width: 801px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
@@ -65,6 +68,9 @@
   .spacing {
     font-size: 0.5vh;
   }
+  .spacingLoading {
+    padding-top: 20vh;
+  }
 }
 @media (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
@@ -98,6 +104,9 @@
   }
   .spacing {
     font-size: 0.5vh;
+  }
+  .spacingLoading {
+    padding-top: 20vh;
   }
 }
 @media (min-width: 1281px) {
@@ -137,6 +146,9 @@
   }
   .spacing {
     font-size: 3vh;
+  }
+  .spacingLoading {
+    padding-top: 20vh;
   }
 }
 
