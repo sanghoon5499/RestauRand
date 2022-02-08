@@ -41,9 +41,8 @@
 
         <!-- Top banner, titular blurb + address input -->
         <div class="container-fluid">
-            <div class="row" style="height: 6vh">
+            <div class="row orangeBar">
                 <div class="col-12" style="background-color:#FF9600;">
-                    
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="RestauRandTitle">RestauRand</div>
@@ -53,7 +52,7 @@
                             <div class="input-group addressBar">
                                 <input id="inputAddress" type="inputAddress" class="form-control" placeholder="userAddress">
                                 <div class="input-group-append">
-                                    <button style="background-color: #FF9600; color: black;" class="btn btn-outline-secondary" type="button" onClick="updateAddress()">></button>
+                                    <button style="background-color: #FFFFFF; color: black;" class="btn btn-outline-secondary border-left-0 border" type="button" onClick="updateAddress()">⌕</button>
                                 </div>
                             </div>
                         </div>
@@ -89,7 +88,7 @@
                             <div class="input-group addressBar">
                                 <input id="inputAddress" type="inputAddress" class="form-control" placeholder="userAddress">
                                 <div class="input-group-append">
-                                    <button style="background-color: #FF9600; color: black;" class="btn btn-outline-secondary" type="button" onClick="updateAddress()">></button>
+                                    <button style="background-color: #FF9600; color: black;" class="btn btn-outline-secondary border-left-0 border" type="button" onClick="updateAddress()">></button>
                                 </div>
                             </div>
                         </div>
@@ -138,6 +137,15 @@
 
 
     <script> 
+        document.addEventListener('keydown', (event) => {
+            const keyName = event.key;
+            const isFocused = document.querySelector(".form-control")
+            if (keyName == "Enter" && isFocused == document.activeElement){
+                updateAddress();
+            }
+
+        }, false);
+
         function updateAddress() {
             // reset localStorage data
             

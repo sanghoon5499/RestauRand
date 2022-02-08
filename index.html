@@ -21,7 +21,6 @@
         async
         src="code.js"
     ></script>
-
 </head>
 
 
@@ -50,7 +49,7 @@
                         <div class="input-group addressBar">
                             <input id="inputAddress" type="inputAddress" class="form-control" placeholder="userAddress">
                             <div class="input-group-append">
-                                <button style="background-color: #FF9600; color: black;" class="btn btn-outline-secondary" type="button" onClick="changePage()">></button>
+                                <button style="background-color: #FF9600; color: black;" class="btn btn-outline-secondary border-left-0 border" type="button" onClick="changePage()">⌕</button>
                             </div>
                         </div>
                     </div>
@@ -127,13 +126,12 @@
                         function mailer() {
                             let action = confirm("Send mail?");
                             if (action) window.location.href = "mailto:sanghoon@mitofthenorth.com";
-                            else return;
+                            return;
                         }
                     </script>
 
                     <div class="col-md-3">ㅤ</div>
                 </div>
-                
             </div>
         </div>
     </div>
@@ -141,8 +139,34 @@
 
 
     <script> 
+        function checkValidAddress() {
+            const geocoder = new google.maps.Geocoder();
+            var address = document.getElementById("inputAddress").value;
+            geocoder.geocode({address: address}, (results, status) => {
+                if (status === "OK") {
+                    latitude = results[0].geometry.location.lat();
+                    longitude = results[0].geometry.location.lng();
+                    alert("lat: ", latitude);
+                    alert("lng: ", longitude);
+                } else {
+                    alert("Geocode was not successful for the following reason: " + status);
+                    alert("longitude and latitude default")
+                }
+            })
+        }
+
+
+        document.addEventListener('keydown', (event) => {
+            const keyName = event.key;
+            const isFocused = document.querySelector(".form-control")
+            if (keyName == "Enter" && isFocused == document.activeElement){
+                changePage();
+            }
+
+        }, false);
+
         function changePage() {
-            // reset localStorage data
+            checkValidAddress();
             
             var address = document.getElementById("inputAddress").value;
             localStorage.setItem("address", address)
